@@ -293,7 +293,7 @@ public class RuntimeValidTests {
 
 	/**
 	 * Execute a given JavaScript file stored on disk using the built-in
-	 * "Nashorn" interpreter.
+	 * "graal.js" interpreter.
 	 *
 	 * @param filename
 	 *            The fully qualified name of the JavaScript file to be
@@ -302,7 +302,7 @@ public class RuntimeValidTests {
 	 * @throws IOException
 	 */
 	private void execJS(String filename, String name) throws ScriptException, IOException {
-		ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
+		ScriptEngine engine = new ScriptEngineManager().getEngineByName("graal.js");
 		// Load the WyJS runtime which provides necessary support methods.
 		engine.eval(new FileReader(WYJS_RUNTIME));
 		// Load the js script from the filesystem

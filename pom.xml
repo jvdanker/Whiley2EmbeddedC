@@ -59,6 +59,16 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+      <dependency>
+          <groupId>org.graalvm.js</groupId>
+          <artifactId>js</artifactId>
+          <version>21.1.0</version>
+      </dependency>
+      <dependency>
+          <groupId>org.graalvm.js</groupId>
+          <artifactId>js-scriptengine</artifactId>
+          <version>21.1.0</version>
+      </dependency>
   </dependencies>
 
 
@@ -140,27 +150,27 @@
       <!-- GPG Signing -->
       <!-- ============================================== -->
 
-      <plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-gpg-plugin</artifactId>
-	<version>1.6</version>
-	<configuration>	
-          <!-- Prevent gpg from using pinentry programs -->
-          <gpgArguments>
-            <arg>--pinentry-mode</arg>
-            <arg>loopback</arg>
-          </gpgArguments>
-	</configuration>	
-	<executions>
-          <execution>
-            <id>sign-artifacts</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>sign</goal>
-            </goals>
-          </execution>
-	</executions>
-      </plugin>
+<!--      <plugin>-->
+<!--	<groupId>org.apache.maven.plugins</groupId>-->
+<!--	<artifactId>maven-gpg-plugin</artifactId>-->
+<!--	<version>1.6</version>-->
+<!--	<configuration>-->
+<!--          &lt;!&ndash; Prevent gpg from using pinentry programs &ndash;&gt;-->
+<!--          <gpgArguments>-->
+<!--            <arg>&#45;&#45;pinentry-mode</arg>-->
+<!--            <arg>loopback</arg>-->
+<!--          </gpgArguments>-->
+<!--	</configuration>-->
+<!--	<executions>-->
+<!--          <execution>-->
+<!--            <id>sign-artifacts</id>-->
+<!--            <phase>verify</phase>-->
+<!--            <goals>-->
+<!--              <goal>sign</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--	</executions>-->
+<!--      </plugin>-->
 
       <!-- ============================================== -->
       <!-- Deployment -->
